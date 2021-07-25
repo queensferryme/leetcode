@@ -52,4 +52,5 @@ mod s5752_maximum_subarray_min_product;
 mod s5788_largest_odd_number_in_string;
 mod s5800_build_array_from_permutation;
 mod s5801_eliminate_maximum_number_of_monsters;
+mod s5823_sum_of_digits_of_string_after_convert;
 mod utility;
