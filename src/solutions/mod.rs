@@ -56,4 +56,5 @@ mod s5823_sum_of_digits_of_string_after_convert;
 mod s5832_array_with_elements_not_equal_to_average_of_neighbors;
 mod s5843_number_of_strings_that_appear_as_substrings_in_word;
 mod s5844_minimum_non_zero_product_of_the_array_elements;
+mod s5850_find_greatest_common_divisor_of_array;
 mod utility;
