@@ -17,7 +17,7 @@ impl Solution {
                     greatest_common_divisor = if greatest_common_divisor == 0 {
                         multiple
                     } else {
-                        Solution::gcd(greatest_common_divisor, multiple)
+                        gcd(greatest_common_divisor, multiple)
                     };
                     if greatest_common_divisor == divisor {
                         result += 1;
@@ -29,8 +29,8 @@ impl Solution {
 
         return result;
     }
+}
 
-    fn gcd(a: i32, b: i32) -> i32 {
-        return if b == 0 { a } else { Solution::gcd(b, a % b) };
-    }
+fn gcd(a: i32, b: i32) -> i32 {
+    return if b == 0 { a } else { gcd(b, a % b) };
 }

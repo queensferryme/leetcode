@@ -27,14 +27,14 @@ impl Solution {
 
         for i in 0..classes.len() {
             let (pass, total) = (classes[i][0], classes[i][1]);
-            heap.push((Solution::delta(pass, total), i));
+            heap.push((delta(pass, total), i));
         }
 
         for _ in 0..extra_students {
             let (_, index) = heap.pop().unwrap();
             classes[index][0] += 1;
             classes[index][1] += 1;
-            heap.push((Solution::delta(classes[index][0], classes[index][1]), index));
+            heap.push((delta(classes[index][0], classes[index][1]), index));
         }
 
         let mut result = 0.0;
@@ -43,11 +43,11 @@ impl Solution {
         }
         return result / classes.len() as f64;
     }
+}
 
-    fn delta(pass: i32, total: i32) -> Float64 {
-        let (pass, total) = (pass as f64, total as f64);
-        let ratio_now = pass / total;
-        let ratio_then = (pass + 1.0) / (total + 1.0);
-        return Float64(ratio_then - ratio_now);
-    }
+fn delta(pass: i32, total: i32) -> Float64 {
+    let (pass, total) = (pass as f64, total as f64);
+    let ratio_now = pass / total;
+    let ratio_then = (pass + 1.0) / (total + 1.0);
+    return Float64(ratio_then - ratio_now);
 }

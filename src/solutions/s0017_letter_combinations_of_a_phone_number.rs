@@ -7,7 +7,7 @@ impl Solution {
 
         for digit in digits.chars() {
             let mut new_results = vec![];
-            for letter in Solution::letters(digit).chars() {
+            for letter in letters(digit).chars() {
                 for result in &results {
                     new_results.push(format!("{}{}", result, letter));
                 }
@@ -17,18 +17,18 @@ impl Solution {
 
         return if digits.is_empty() { vec![] } else { results };
     }
+}
 
-    fn letters(digit: char) -> &'static str {
-        return match digit {
-            '2' => "abc",
-            '3' => "def",
-            '4' => "ghi",
-            '5' => "jkl",
-            '6' => "mno",
-            '7' => "pqrs",
-            '8' => "tuv",
-            '9' => "wxyz",
-            _ => panic!(),
-        };
-    }
+fn letters(digit: char) -> &'static str {
+    return match digit {
+        '2' => "abc",
+        '3' => "def",
+        '4' => "ghi",
+        '5' => "jkl",
+        '6' => "mno",
+        '7' => "pqrs",
+        '8' => "tuv",
+        '9' => "wxyz",
+        _ => panic!(),
+    };
 }

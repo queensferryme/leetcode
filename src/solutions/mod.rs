@@ -58,4 +58,5 @@ mod s5843_number_of_strings_that_appear_as_substrings_in_word;
 mod s5844_minimum_non_zero_product_of_the_array_elements;
 mod s5850_find_greatest_common_divisor_of_array;
 mod s5851_find_unique_binary_string;
+mod s5863_count_special_quadruplets;
 mod utility;

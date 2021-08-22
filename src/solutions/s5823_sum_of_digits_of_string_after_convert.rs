@@ -6,24 +6,24 @@ impl Solution {
         let mut result = 0;
 
         for ch in string.chars() {
-            result += Solution::get_sum_of_digits(ch as i32 - 'a' as i32 + 1);
+            result += get_sum_of_digits(ch as i32 - 'a' as i32 + 1);
         }
 
         for _ in 1..k {
-            result = Solution::get_sum_of_digits(result);
+            result = get_sum_of_digits(result);
         }
 
         return result;
     }
+}
 
-    fn get_sum_of_digits(mut number: i32) -> i32 {
-        let mut sum = 0;
+fn get_sum_of_digits(mut number: i32) -> i32 {
+    let mut sum = 0;
 
-        while number != 0 {
-            sum += number % 10;
-            number /= 10;
-        }
-
-        return sum;
+    while number != 0 {
+        sum += number % 10;
+        number /= 10;
     }
+
+    return sum;
 }

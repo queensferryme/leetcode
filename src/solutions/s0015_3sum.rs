@@ -14,25 +14,25 @@ impl Solution {
                 let sum = numbers[left] + numbers[center] + numbers[right];
                 if sum == 0 {
                     result.push(vec![numbers[left], numbers[center], numbers[right]]);
-                    center = Solution::next(&numbers, &center, 1);
+                    center = next(&numbers, &center, 1);
                 } else if sum < 0 {
-                    center = Solution::next(&numbers, &center, 1);
+                    center = next(&numbers, &center, 1);
                 } else {
-                    right = Solution::next(&numbers, &right, -1);
+                    right = next(&numbers, &right, -1);
                 }
             }
-            left = Solution::next(&numbers, &left, 1);
+            left = next(&numbers, &left, 1);
         }
 
         return result;
     }
+}
 
-    fn next(numbers: &Vec<i32>, index: &usize, step: i32) -> usize {
-        let mut index = *index;
-        let value = numbers[index];
-        while numbers.get(index) == Some(&value) {
-            index = (index as i32 + step) as usize;
-        }
-        return if index == usize::MAX { 0 } else { index };
+fn next(numbers: &Vec<i32>, index: &usize, step: i32) -> usize {
+    let mut index = *index;
+    let value = numbers[index];
+    while numbers.get(index) == Some(&value) {
+        index = (index as i32 + step) as usize;
     }
+    return if index == usize::MAX { 0 } else { index };
 }
