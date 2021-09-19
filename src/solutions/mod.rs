@@ -61,4 +61,5 @@ mod s5851_find_unique_binary_string;
 mod s5863_count_special_quadruplets;
 mod s5875_final_value_of_variable_after_performing_operations;
 mod s5876_sum_of_beauty_in_the_array;
+mod s5877_detect_squares;
 mod utility;
