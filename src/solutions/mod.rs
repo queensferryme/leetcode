@@ -59,4 +59,5 @@ mod s5844_minimum_non_zero_product_of_the_array_elements;
 mod s5850_find_greatest_common_divisor_of_array;
 mod s5851_find_unique_binary_string;
 mod s5863_count_special_quadruplets;
+mod s5875_final_value_of_variable_after_performing_operations;
 mod utility;
